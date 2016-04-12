@@ -77,6 +77,7 @@ MVVM最主要的特点是其有viewModel，其处理了原本我们放在viewCon
 3. 借鉴别人用ReactiveCocoa实现MVVM demo，[博文地址](http://www.ios122.com/2015/10/mvvm_2/)
 
 接下来，自己动手来实现，场景是读取书单文件内容，将其展示到tableView中；在文本框中输入字符，tableView中实时显示包含字符的书单列表。项目目录结构
+
 <img src="http://7xrh2s.com1.z0.glb.clouddn.com/iosMVVM%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png" width = "210" height = "350" alt="目录结构" align="center" />
 
 有些文件前缀忘记加上=。=|| 其中Handler中对动画处理的方法；Model中TLUser是用户类，处理登陆名和密码是否正确，这边还未涉及数据库和网络请求；Book是对应每本书信息，书名和出版时间；viewController中ViewController是处理登陆页面逻辑和动画展示，BookListViewController是对应书单列表展示，还有输入框；view暂时没有，使用storyboard构建界面；viewModel中TLLoginViewModel，调用TLUser中方法判断是否可以登陆，考虑如果是查询数据库验证时，可以将这部分逻辑放到TLLoginViewModel；TLBookListViewModel对应tableview中的数据源有TLBookItemViewModel的数组对象，
